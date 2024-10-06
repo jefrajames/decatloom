@@ -1,0 +1,20 @@
+== Java Loom Decathlon Tech Day demo
+
+This project provides some benchmarks to help you evaluate the real benefits of Virtual Threads:
+
+* basic-se: basic Java SE benchmark
+* helidon3: Java backend application running with Helidon 3 (Platform threads)
+* helidon4: Java backend application running with Helidon 4 (Virtual threads)
+* quarkus: Java backend application running with Quarkus 3 (Platform and Virtual threads)
+* liberty: Java backend application running with Openb Liberty (Platform Threads)
+
+== Technical context
+
+* MacBook Air M1, MacOS
+* OpenJDK 22.0.1 (Temurin distribution)
+* Maven 3.9.8
+* https://sdkman.io/[sdkman]
+* https://github.com/wg/wrk[wrk benchmark tool] to inject HTTP 1.1 traffic
+* https://helidon.io/[Helidon] 3.2.8 and 4.0.8
+* https://quarkus.io/[Quarkus 3.19.2]
+* https://openliberty.io/start/[Open Liberty 24.0.0.5]

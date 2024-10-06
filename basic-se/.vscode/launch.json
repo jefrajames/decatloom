@@ -1,0 +1,156 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MaxPThreads",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loombench.MaxPThreads",
+            "projectName": "loom-basic"
+        },
+        {
+            "type": "java",
+            "name": "SimplePinnedDemo",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.pinned.SimplePinnedDemo",
+            "projectName": "loom-basic",
+            "vmArgs": "-Djdk.tracePinnedThreads=short"
+        },
+        {
+            "type": "java",
+            "name": "StressPool",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.pool.StressPool",
+            "projectName": "loom-basic"
+        },
+        {
+            "type": "java",
+            "name": "PinnedDemo",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.pool.PinnedDemo",
+            "projectName": "loom-basic"
+        },
+        {
+            "type": "java",
+            "name": "PinnedDemo",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.continuation.PinnedDemo",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview --add-exports java.base/jdk.internal.vm=ALL-UNNAMED"
+        },
+        {
+            "type": "java",
+            "name": "SimplifiedVirtualThread",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.continuation.SimplifiedVirtualThread",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview --add-exports java.base/jdk.internal.vm=ALL-UNNAMED"
+        },
+        {
+            "type": "java",
+            "name": "StressPool",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.maxthread.StressPool",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview -Djdk.tracePinnedThreads=short -Djdk.virtualThreadScheduler.parallelism=4 -Djdk.virtualThreadScheduler.maxPoolSize=32 -Djdk.virtualThreadScheduler.minRunnable=16"
+        },
+        {
+            "type": "java",
+            "name": "MaxVThreads",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.maxthread.MaxVThreads",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview -Xmx16g -Xms16g -Xlog:gc:./gc.log"
+        },
+        {
+            "type": "java",
+            "name": "MaxPThreads",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.maxthread.MaxPThreads",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview"
+        },
+        {
+            "type": "java",
+            "name": "MaxDeepVThreads",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.deepstack.MaxDeepVThreads",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview"
+        },
+        {
+            "type": "java",
+            "name": "MaxDeepPThreads",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.deepstack.MaxDeepPThreads",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview"
+        },
+        {
+            "type": "java",
+            "name": "ContinuationsRunByVThreads",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.continuation.ContinuationsRunByVThreads",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview --add-exports java.base/jdk.internal.vm=ALL-UNNAMED"
+        },
+        {
+            "type": "java",
+            "name": "ContinuationsRunInCallables",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.continuation.ContinuationsRunInCallables",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview --add-exports java.base/jdk.internal.vm=ALL-UNNAMED"
+        },
+        {
+            "type": "java",
+            "name": "ContinuationsRunByCallablesStepByStep",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.continuation.ContinuationsRunInCallablesStepByStep",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview --add-exports java.base/jdk.internal.vm=ALL-UNNAMED"
+        },
+        {
+            "type": "java",
+            "name": "ContinuationRunByPThread",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.continuation.ContinuationRunByPThread",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview --add-exports java.base/jdk.internal.vm=ALL-UNNAMED"
+        },
+        {
+            "type": "java",
+            "name": "ContinuationsRunByCallables",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.continuation.ContinuationsRunByCallables",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview --add-exports java.base/jdk.internal.vm=ALL-UNNAMED"
+        },
+        {
+            "type": "java",
+            "name": "ContinuationsRunByCallablesStepByStep",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.continuation.ContinuationsRunByCallablesStepByStep",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview --add-exports java.base/jdk.internal.vm=ALL-UNNAMED"
+        },
+        {
+            "type": "java",
+            "name": "ContinuationIODemo",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.continuation.ContinuationIODemo",
+            "projectName": "loom-basic",
+            "vmArgs": "--enable-preview --add-exports java.base/jdk.internal.vm=ALL-UNNAMED"
+        },
+        {
+            "type": "java",
+            "name": "ManyTasks",
+            "request": "launch",
+            "mainClass": "io.jefrajames.loomdemo.manytasks.ManyTasks",
+            "projectName": "loom-basic"
+        }
+    ]
+}

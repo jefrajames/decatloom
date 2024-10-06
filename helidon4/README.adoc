@@ -1,0 +1,42 @@
+== Helidon 4 benchmark
+
+Helidon 4 benchmark. By default, Helidon 4 runs with with Virtual Threads and uses Nima as Web Server. It is possible to run with Platform Thread using @ExecuteOn(ThreadType.PLATFORM) annotation. Simulates a backend applications exposing a REST API, running business logic with database access.
+
+wrk is used to inject REST/HTTP request.
+
+To avoid being disturbed by a poor database design or JDBC driver implementation, database access is simulated with a Semaphore.
+
+== Benchmark configuration
+
+Benchmark configuration is centralised in setEnv.sh both for the injector and the server.
+
+You can configure;
+
+* **WRK_C:** how many incoming connections used by wrk (HTTP injector)
+* *DB_POOL_SIZE:* size of the server database connection pool (how many connections).
+
+[source,sh]
+----
+# To package the project
+mvn package
+
+# Edit setenv.sh to configure the benchmark
+vi setEnv.sh
+
+# To start the server
+./runServer.sh
+
+# To start a benchmark
+./bench.sh
+----
+
+It is recommended to restart the server for each benchmark in order to reset the counters provided in log messages.
+
+== Server log format
+
+* *PT:* processed by Platform Threads
+* *Total:* count of processed requests
+* *Running:* how many threads are running?
+* *Max:* maximum number of running threads
+* *DBPool:* how many database connections used from the pool
+* *Memory:* Java memory used

@@ -1,0 +1,27 @@
+== Java SE benchmark
+
+A basic Java SE benchmark comparing Platform and Virtual Threads performance.
+
+The goal is to determine whether VT are really faster, cheaper and lighter than PT.
+
+[source,sh]
+----
+# To package the project
+mvn package
+
+# To run with Platform Threads
+./runPT.sh <nb of threads>
+
+# To run with Virtual Threads
+./runVT.sh <nb of Threads>
+----
+
+== Findings
+
+
+* No more than 4096 Platform Threads on macOS (see num_taskthreads system parameter)
+* Up to 64 millions Virtual Threads
+* Using 8 Carrier Threads
+* ~ 200 VT started/ms
+* Linear memory footprint
+* ~ 1 KB/VT
