@@ -17,6 +17,9 @@ You can configure;
 
 [source,sh]
 ----
+# To prepare all dependencies
+mvn liberty:dev
+
 # To package the project
 mvn liberty:package -Dinclude=runnable
 
@@ -34,7 +37,7 @@ It is recommended to restart the server for each benchmark in order to reset the
 
 == Server log format
 
-* *PT:* processed by Platform Threads
+* *PT/VT:* processed by Platform or Virtual Threads
 * *Total:* count of processed requests
 * *Running:* how many threads are running?
 * *Max:* maximum number of running threads

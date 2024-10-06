@@ -34,7 +34,7 @@ It is recommended to restart the server for each benchmark in order to reset the
 
 == Server log format
 
-* *PT:* processed by Platform Threads
+* *VT:* processed by Virtual Threads
 * *Total:* count of processed requests
 * *Running:* how many threads are running?
 * *Max:* maximum number of running threads
